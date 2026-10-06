@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Coding Tools</title>
-    <meta name="description" content="Best AI coding tools for developers">
+    <title>AI Coding Tools - 最佳AI编程工具推荐</title>
+    <meta name="description" content="精选最佳AI编程工具，包括代码生成、调试、解释、重构工具，开发者效率翻倍">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        nav { padding: 1.5rem 0; border-bottom: 1px solid #eee; margin-bottom: 4rem; }
+        nav { padding: 1.5rem 0; border-bottom: 1px solid #eee; margin-bottom: 3rem; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; text-decoration: none; }
-        .hero { text-align: center; padding: 6rem 0; }
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-        .hero p { font-size: 1.25rem; color: #666; max-width: 600px; margin: 0 auto 3rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 4rem 0; }
-        .card { padding: 2rem; border: 1px solid #eee; border-radius: 12px; transition: all 0.2s; }
+        .hero { text-align: center; padding: 4rem 0 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .card { padding: 1.5rem; border: 1px solid #eee; border-radius: 12px; transition: all 0.2s; }
         .card:hover { border-color: #1a1a1a; transform: translateY(-2px); }
-        .card h3 { font-size: 1.25rem; margin-bottom: 1rem; }
-        .card p { color: #666; }
-        footer { padding: 3rem 0; border-top: 1px solid #eee; text-align: center; color: #999; margin-top: 6rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .card .tag { display: inline-block; padding: 0.2rem 0.6rem; background: #f0f0f0; border-radius: 12px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .card p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .card a { color: #1a1a1a; text-decoration: none; font-weight: 500; }
+        .card a:hover { text-decoration: underline; }
+        footer { padding: 3rem 0; border-top: 1px solid #eee; text-align: center; color: #999; margin-top: 4rem; }
     </style>
 </head>
 <body>
@@ -29,24 +31,112 @@
         <div class="container">
             <a href="/" class="logo">💻 AI Coding Tools</a>
             <div>
-                <a href="/about" style="color: #666; text-decoration: none;">About</a>
+                <a href="/" style="margin-right: 1.5rem; color: #666; text-decoration: none;">Home</a>
+                <a href="/about" style="color: #666; text-decoration: none;">关于</a>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="hero">
-            <h1>💻 AI Coding Tools</h1>
-            <p>Best AI coding tools for developers</p>
+            <h1>💻 最佳 AI 编程工具</h1>
+            <p>精选开发者必备的AI编程工具，从代码生成到调试、重构、解释，让你效率翻倍</p>
         </div>
         <div class="grid">
-            <div class="card"><h3>🔥 Popular</h3><p>Most popular tools and resources</p></div>
-            <div class="card"><h3>🆕 Latest</h3><p>Updated daily by AI agents</p></div>
-            <div class="card"><h3>📊 Reviews</h3><p>Honest reviews and comparisons</p></div>
+            <div class="card">
+                <h3>Cursor</h3>
+                <div>
+                    <span class="tag">编辑器</span>
+                    <span class="tag">代码生成</span>
+                    <span class="tag">免费额度</span>
+                </div>
+                <p>AI-first代码编辑器，内置GPT-4o，支持代码补全、重构、解释，开发者神器</p>
+                <a href="https://cursor.sh" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>GitHub Copilot</h3>
+                <div>
+                    <span class="tag">代码补全</span>
+                    <span class="tag">IDE插件</span>
+                    <span class="tag">付费</span>
+                </div>
+                <p>GitHub官方AI编程助手，支持VS Code、JetBrains等IDE，实时代码补全</p>
+                <a href="https://github.com/features/copilot" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>Claude 3.5 Sonnet</h3>
+                <div>
+                    <span class="tag">代码解释</span>
+                    <span class="tag">调试</span>
+                    <span class="tag">免费额度</span>
+                </div>
+                <p>超强代码理解能力，适合解释复杂代码、调试bug、写测试用例</p>
+                <a href="https://claude.ai" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>DeepSeek Coder</h3>
+                <div>
+                    <span class="tag">开源</span>
+                    <span class="tag">代码生成</span>
+                    <span class="tag">免费</span>
+                </div>
+                <p>国产开源代码大模型，支持多种编程语言，效果媲美GPT-4</p>
+                <a href="https://deepseek.com" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>CodeLlama</h3>
+                <div>
+                    <span class="tag">开源</span>
+                    <span class="tag">Meta出品</span>
+                    <span class="tag">免费</span>
+                </div>
+                <p>Meta开源的代码大模型，可本地部署，隐私安全</p>
+                <a href="https://ai.meta.com/blog/codellama" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>Tabnine</h3>
+                <div>
+                    <span class="tag">代码补全</span>
+                    <span class="tag">隐私优先</span>
+                    <span class="tag">免费额度</span>
+                </div>
+                <p>专注隐私的AI代码补全工具，支持本地部署，代码不上传</p>
+                <a href="https://tabnine.com" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>Codeium</h3>
+                <div>
+                    <span class="tag">代码补全</span>
+                    <span class="tag">免费</span>
+                    <span class="tag">多IDE</span>
+                </div>
+                <p>免费的AI代码补全工具，支持70+编程语言，VS Code、JetBrains都能用</p>
+                <a href="https://codeium.com" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>Replit AI</h3>
+                <div>
+                    <span class="tag">在线IDE</span>
+                    <span class="tag">AI编程</span>
+                    <span class="tag">免费额度</span>
+                </div>
+                <p>在线IDE内置AI助手，从零开始写项目，不用配环境</p>
+                <a href="https://replit.com" target="_blank">访问官网 →</a>
+            </div>
+            <div class="card">
+                <h3>Windsurf</h3>
+                <div>
+                    <span class="tag">编辑器</span>
+                    <span class="tag">Agent模式</span>
+                    <span class="tag">免费额度</span>
+                </div>
+                <p>Codeium出品的AI编辑器，支持Agent模式，自动完成多文件修改</p>
+                <a href="https://windsurf.com" target="_blank">访问官网 →</a>
+            </div>
         </div>
     </div>
     <footer>
         <div class="container">
-            <p>© 2026 AI Coding Tools - Maintained by AI Agent Cluster</p>
+            <p>© 2026 AI Coding Tools - 由 AI 智能集群自动维护更新</p>
         </div>
     </footer>
 </body>
