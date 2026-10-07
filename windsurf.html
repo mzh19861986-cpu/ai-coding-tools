@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windsurf - 详细介绍 | AI Coding Tools</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
+        nav a { color: #6b7280; text-decoration: none; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #111; color: white; border-radius: 8px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
+    <div class="container">
+        <h1>💻 Windsurf</h1>
+        <div class="content">
+            # Windsurf 详细介绍<br><br>## 1. 这个工具是什么<br><br>Windsurf 是一款 **AI 驱动的代码编辑器**（IDE），由 Codeium 团队开发，2024 年底正式推出。它的定位和 Cursor 非常接近——本质上都是把 AI 编程能力深度集成到编辑器里，让开发者可以通过自然语言对话来写代码、改代码、理解代码库。<br><br>Windsurf 基于 VS Code 的架构（沿用其界面和插件生态的部分兼容性），所以如果你之前用 VS Code 或 Cursor，上手几乎没有门槛。<br><br>它最核心的差异化卖点是 **Cascade**——一个能感知整个代码库上下文、支持多步骤自主操作的 AI Agent 系统。<br><br>---<br><br>## 2. 适合谁用<br><br>**比较适合：**<br>- 已经习惯 VS Code 或 Cursor 的开发者，想尝试另一个 AI IDE 选项<br>- 需要 AI 帮忙处理跨文件、多步骤任务的开发者（比如重构、加功能、写测试）<br>- 中小型项目的独立开发者或小团队<br>- 想用自然语言快速理解陌生代码库的人<br><br>**不太适合：**<br>- 对 IDE 稳定性要求极高的生产环境重度用户（AI IDE 目前都还有各种小毛病）<br>- 只想要一个轻量代码补全插件的人（那用 Copilot 或 Continue 就够了）<br>- 完全不想改变现有工作流的人<br><br>---<br><br>## 3. 核心功能<br><br>**Cascade（核心 Agent）**<br>- 能读取整个项目的上下文，理解文件之间的依赖关系<br>- 支持多步骤任务：比如"给这个 API 加上鉴权，并更新相关测试"——它会自己规划步骤、改多个文件<br>- 会显示每一步的操作，你可以审查、接受或拒绝<br>- 支持终端命令执行（需要你确认）<br><br>**代码补全（Supercomplete / Autocomplete）**<br>- 实时的行内补全，支持多行建议<br>- 基于 Codeium 的模型，速度比较快<br><br>**内联 AI 编辑（Command）**<br>- 选中代码后直接用自然语言描述修改需求，比如"把这个函数改成 async"<br>- 类似 Cursor 的 Cmd+K 功能<br><br>**代码库索引（Context Awareness）**<br>- 自动索引本地代码库，AI 回答时会引用相关文件<br>- 支持 @ 提及特定文件或符号<br><br>**模型选择**<br>- 支持多家模型（Claude、GPT 系列、Codeium 自家模型等），不同模型消耗的积分不同<br><br>**其他**<br>- 兼容部分 VS Code 插件<br>- 内置终端、Git 集成等常规 IDE 功能<br><br>---<br><br>## 4. 优缺点<br><br>**优点：**<br>- Cascade 的 Agent 能力确实实用，处理跨文件任务比纯补全工具强很多<br>- 界面和 VS Code 一致，迁移成本低<br>- 免费档给得比较大方，日常轻度使用够用<br>- 代码库索引质量不错，回答时引用文件比较准确<br>- 支持多模型切换，灵活性好<br><br>**缺点：**<br>- **稳定性一般**：Cascade 有时会卡住、重复操作或误解意图，需要人工干预<br>- **积分制限制**：免费/低价档的 AI 调用次数有限，重度使用会很快耗尽<br>- **资源占用较高**：和 Cursor 类似，开着索引和 AI 功能时内存吃得多<br>- **生态还不如 Cursor 成熟**：插件兼容性、社区资源、更新频率都稍逊一筹<br>- **大项目表现下降**：代码库特别大时，上下文理解会出现遗漏<br>- **终端操作需谨慎**：Agent 执行命令时有翻车风险，务必逐条确认<br><br>---<br><br>## 5. 怎么开始用<br><br>1. **下载**：去 windsurf.com 官网，下载对应系统版本（Windows / macOS / Linux）<br>2. **安装**：和普通软件一样安装，首次启动会问你是否从 VS Code 导入配置（推荐导入，省事）<br>3. **登录**：注册/登录 Codeium 账号<br>4. **打开项目**：像 VS Code 一样打开文件夹，它会自动开始索引代码库<br>5. **试用 Cascade**：按快捷键（默认 Ctrl/Cmd+L）打开 Cascade 面板，试着问"这个项目的入口在哪"或"帮我加一个 XX 功能"<br>6. **试试内联编辑**：选中一段代码，按 Ctrl/Cmd+I，用自然语言描述修改<br>7. **关注积分**：在设置里能看到剩余积分，避免用到一半被限流<br><br>**上手建议**：先从小任务开始（改个函数、写个测试），熟悉它的行为模式后再让它做复杂的多文件改动。<br><br>---<br><br>## 6. 免费还是付费<br><br>**有免费档，也有付费档。**<br><br>- **免费版**：提供有限的 AI 调用积分（每月刷新），基础补全和少量 Cascade 使用。适合尝鲜或轻度使用。<br>- **Pro 版**：约 $15/月，积分大幅增加，可用更高级的模型，Cascade 使用限制放宽。<br>- **Team / Enterprise**：团队协作功能，价格另议。<br>- **Pro Ultimate**（部分时期提供）：更高积分额度，价格更高。<br><br>**实话实说**：免费档能让你体验核心功能，但如果每天都要用 Cascade 干活，基本一两天就会耗尽积分。想认真用，付费几乎是必然的。<br><br>---<br><br>## 总结<br><br>Windsurf 是一款有实力的 AI IDE，Cascade 的 Agent 能力是它区别于普通补全工具的关键。它和 Cursor 是直接竞品，各有优劣——Cursor 生态更成熟，Windsurf 在某些 Agent 场景下体验也不错。如果你已经在用 Cursor，不必急着换；如果你还没用过 AI IDE，或者对 Cursor 的定价/限制不满意，Windsurf 值得一试。但无论用哪个，目前这类工具的定位都是"辅助"，最终代码质量和正确性还是得靠你自己把关。
+        </div>
+        <a href="https://www.windsurf.com" target="_blank" class="cta">访问官网 →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabnine - 详细介绍 | AI Coding Tools</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
+        nav a { color: #6b7280; text-decoration: none; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #111; color: white; border-radius: 8px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
+    <div class="container">
+        <h1>💻 Tabnine</h1>
+        <div class="content">
+            # Tabnine 详细介绍<br><br>## 1. 这个工具是什么<br><br>Tabnine 是一款 **AI 代码补全工具**，最早以 "Codota" 的名字出现（2013 年左右），后来改名 Tabnine，是这类工具里比较早的一批。它通过在你写代码时实时给出补全建议，减少重复敲键盘的时间。<br><br>和 ChatGPT、Claude 这类通用大模型不同，Tabnine 专注在"编辑器里的代码补全"这个场景，形态上更接近 GitHub Copilot。它支持 VS Code、JetBrains 全家桶（IntelliJ、PyCharm、WebStorm 等）、Neovim、Eclipse、Visual Studio 等主流 IDE。<br><br>**一个关键区别**：Tabnine 早期主打"本地模型 + 隐私保护"，强调代码不上传云端。后来也加入了基于大模型的云端补全（Tabnine Chat、Agent 等），但隐私和企业自托管仍然是它的主要卖点之一。<br><br>---<br><br>## 2. 适合谁用<br><br>- **企业开发团队**：尤其是对代码隐私、合规有要求，不希望代码被传到第三方训练的公司。Tabnine 支持私有化部署。<br>- **个人开发者**：想要一个比 IDE 自带补全更强的工具，但又不想付费买 Copilot 的人（免费版够用）。<br>- **使用多种语言/多 IDE 的人**：Tabnine 覆盖面广，不挑编辑器。<br>- **对 AI 补全持谨慎态度的人**：不想让代码离开本地环境的用户。<br><br>**不太适合**：<br>- 想要最强补全质量的人（Copilot、Cursor 目前普遍被认为更强）。<br>- 想用 AI 做复杂重构、跨文件大改动的人（这类需求更适合 Cursor、Claude Code 等）。<br><br>---<br><br>## 3. 核心功能<br><br>- **代码补全**：根据上下文补全单行或整段代码，支持 20+ 种语言（Python、JS/TS、Java、Go、Rust、C++ 等）。<br>- **整行/整函数补全**：不只是补一个词，能补出完整函数体。<br>- **自然语言注释生成代码**：写一句注释，它帮你生成对应代码。<br>- **Tabnine Chat**（付费）：在 IDE 里对话式提问、解释代码、生成代码。<br>- **代码解释 / 文档生成**：给选中的代码生成注释或说明。<br>- **企业功能**：私有化部署、代码库微调（用你自己团队的代码训练模型）、SSO、审计日志等。<br>- **多 IDE 支持**：VS Code、JetBrains、Neovim、Eclipse、Visual Studio 等。<br><br>---<br><br>## 4. 优缺点<br><br>**优点**<br>- IDE 和语言覆盖广，兼容性好。<br>- 隐私和企业部署能力是同类里比较突出的（可本地/自托管）。<br>- 免费版可用，门槛低。<br>- 补全响应速度不错，本地模型延迟低。<br>- 不会强制要求你把代码传到云端（取决于你选的模式）。<br><br>**缺点**<br>- **补全质量不如 GitHub Copilot、Cursor**：尤其在复杂上下文、跨文件理解上差距明显。<br>- 免费版功能受限，高级模型和 Chat 要付费。<br>- 定价对个人来说偏贵（Pro 大约 $9/月，企业版更贵）。<br>- 大模型能力上，Tabnine 自研模型规模较小，和 GPT/Claude 系产品有代差。<br>- 界面和交互相对"传统"，不如 Cursor 这类新工具激进。<br>- 中文社区资料少，遇到问题排查靠官方文档。<br><br>**一句话总结**：稳、兼容好、重隐私，但"最强"谈不上。<br><br>---<br><br>## 5. 怎么开始用<br><br>1. 去官网 **tabnine.com** 注册账号。<br>2. 在你的 IDE 里装插件：<br>   - VS Code：扩展市场搜 "Tabnine"<br>   - JetBrains：Settings → Plugins → 搜 "Tabnine"<br>   - 其他 IDE 官网有对应安装包<br>3. 安装后用账号登录（或选本地模式，不登录也能用基础补全）。<br>4. 打开一个代码文件，开始打字，补全会以灰色文字出现，按 **Tab** 接受。<br>5. 需要 Chat / 高级功能的话，在插件面板里打开对应入口（可能提示升级）。<br><br>基本 5 分钟能跑起来，不需要复杂配置。<br><br>---<br><br>## 6. 免费还是付费<br><br>**有免费版，也有付费版。**<br><br>- **免费版（Basic）**：短代码补全，基础功能，个人可用，但补全长度和能力有限。<br>- **Pro**：约 **$9/月**（年付更便宜），解锁整行/整函数补全、更强模型、Tabnine Chat 等。<br>- **Enterprise**：按人数报价，包含私有化部署、用自有代码微调、SSO、管理后台等，价格需要联系销售。<br><br>对比一下：GitHub Copilot 个人版 $10/月，Cursor $20/月。Tabnine Pro 价格相近，但普遍评价是补全质量略逊于 Copilot。**选它的理由通常是隐私、自托管、多 IDE，而不是"最强补全"。**<br><br>---<br><br>## 结论<br><br>Tabnine 是一款成熟、稳定、重视隐私的 AI 代码补全工具，适合企业和对代码外传敏感的用户。如果你只是个人开发者、追求最强补全体验，Copilot 或 Cursor 可能更合适；如果你在公司里需要合规、可自托管的方案，Tabnine 值得认真考虑。
+        </div>
+        <a href="https://www.tabnine.com" target="_blank" class="cta">访问官网 →</a>
+    </div>
+</body>
+</html>

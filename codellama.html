@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLlama - 详细介绍 | AI Coding Tools</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
+        nav a { color: #6b7280; text-decoration: none; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #111; color: white; border-radius: 8px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
+    <div class="container">
+        <h1>💻 CodeLlama</h1>
+        <div class="content">
+            # CodeLlama 详细介绍<br><br>## 1. 这个工具是什么<br><br>CodeLlama 是 Meta（Facebook 母公司）在 2023 年 8 月发布的一系列**代码专用大语言模型**，基于 Llama 2 训练而来。它不是某个网页产品，而是一组**开源模型权重**，任何人都可以下载、本地部署或接入自己的应用。<br><br>主要包含三个方向：<br><br>- **CodeLlama（基础版）**：通用代码生成与补全<br>- **CodeLlama - Python**：专门针对 Python 优化<br>- **CodeLlama - Instruct**：经过指令微调，能理解自然语言指令（如"帮我写一个排序函数"）<br><br>参数规模有 **7B、13B、34B、70B** 几个版本（70B 是后来补充的）。其中 7B 和 13B 还有 **Fill-in-the-Middle（FIM）** 能力，适合做 IDE 里的代码补全。<br><br>需要明确一点：CodeLlama 是**基座模型**，不是像 GitHub Copilot 那样开箱即用的产品。你要用它，通常得自己搭环境，或者通过第三方平台调用。<br><br>---<br><br>## 2. 适合谁用<br><br>**比较适合：**<br><br>- **有本地部署能力的开发者**：想在自己的服务器或电脑上跑代码模型，数据不出本地<br>- **做 AI 应用开发的团队**：需要一个可微调、可商用的代码模型底座<br>- **研究者**：想研究代码大模型的行为、微调方法<br>- **对隐私敏感的场景**：公司代码不能上传到云端，只能本地跑<br><br>**不太适合：**<br><br>- **只想在 IDE 里有个补全插件的普通开发者**：直接用 Copilot、Cursor、通义灵码更省事<br>- **不想折腾环境的人**：CodeLlama 本身没有官方 GUI，配置门槛不低<br>- **追求最强代码能力的人**：目前 GPT-4、Claude 系列、DeepSeek-Coder 等在多数基准上已超过 CodeLlama<br><br>---<br><br>## 3. 核心功能<br><br>- **代码补全**：根据上下文续写代码，7B/13B 支持 FIM（中间填充），适合编辑器集成<br>- **代码生成**：根据自然语言描述生成函数、脚本、类<br>- **代码对话（Instruct 版）**：回答编程问题、解释代码、调试建议<br>- **多语言支持**：官方重点覆盖 Python、C++、Java、PHP、TypeScript、C#、Bash 等，Python 版本对 Python 优化最好<br>- **长上下文**：部分版本支持 100K token 上下文，能处理较长代码文件<br>- **可微调**：权重开放，可以用自己的代码库做 LoRA 或全量微调<br>- **可商用**：遵循 Llama 2 社区许可，月活低于 7 亿的公司可免费商用<br><br>---<br><br>## 4. 优缺点<br><br>**优点：**<br><br>- **开源可本地部署**：代码和数据不出内网，隐私可控<br>- **免费**：权重免费下载，无 API 调用费（自己出算力成本）<br>- **可微调**：能针对特定语言或公司代码风格定制<br>- **商用友好**：许可相对宽松，多数公司可直接用<br>- **生态成熟**：Ollama、llama.cpp、vLLM、Hugging Face 都支持，工具链齐全<br><br>**缺点：**<br><br>- **能力已不算顶尖**：在 HumanEval、MBPP 等基准上，已被 DeepSeek-Coder、Qwen-Coder、GPT-4o、Claude 3.5 等超越<br>- **部署有门槛**：34B/70B 需要专业显卡，7B/13B 效果又有限<br>- **没有官方产品**：不像 Copilot 装个插件就能用，得自己搭<br>- **中文支持一般**：训练数据以英文为主，中文注释和中文指令理解弱于国产模型<br>- **更新放缓**：Meta 后续重心转向 Llama 3/4 系列，CodeLlama 迭代不如竞品活跃<br><br>---<br><br>## 5. 怎么开始用<br><br>**方式一：本地跑（推荐有显卡的人）**<br><br>最简单的是用 **Ollama**：<br><br>```bash<br>ollama pull codellama<br>ollama run codellama<br>```<br><br>几行命令就能对话。7B 版本 8GB 显存可跑，13B 需要 16GB 左右。<br><br>**方式二：Hugging Face 下载权重**<br><br>在 Hugging Face 搜 `codellama/CodeLlama-7b-Instruct-hf`，用 transformers 加载：<br><br>```python<br>from transformers import AutoTokenizer, AutoModelForCausalLM<br>tokenizer = AutoTokenizer.from_pretrained("codellama/CodeLlama-7b-Instruct-hf")<br>model = AutoModelForCausalLM.from_pretrained("codellama/CodeLlama-7b-Instruct-hf")<br>```<br><br>**方式三：接入 IDE**<br><br>- **VS Code**：装 Continue 或 CodeGPT 插件，后端指向本地 Ollama<br>- **Neovim**：用 llama.cpp + 补全插件<br><br>**方式四：用云 API**<br><br>- **Replicate、Together AI、Perplexity Labs** 等都提供 CodeLlama 的托管调用，按 token 付费，省去部署麻烦<br><br>**方式五：在线试玩**<br><br>Hugging Face Spaces 上有不少 CodeLlama 的 demo，可以先体验再决定要不要本地部署。<br><br>---<br><br>## 6. 免费还是付费<br><br>**模型本身：免费。**<br><br>- 权重在 Hugging Face 和 Meta 官网免费下载<br>- 遵循 **Llama 2 社区许可**：月活用户少于 7 亿的产品可免费商用；超过需向 Meta 申请<br>- 不能用来训练其他非 Llama 系的大模型（许可里有这条限制）<br><br>**实际使用成本：**<br><br>- **本地部署**：模型免费，但要自己承担硬件电费/云 GPU 费用<br>- **云 API 调用**：Replicate、Together 等按量收费，通常比 GPT-4 便宜很多<br>- **第三方集成产品**：如果通过某个商业插件用 CodeLlama，那按那个产品的定价走<br><br>**一句话总结**：CodeLlama 本身不要钱，但"用起来"这件事可能要花钱——要么花在硬件上，要么花在云服务上。<br><br>---<br><br>## 客观建议<br><br>如果你是**个人开发者想省钱 + 有点折腾精神**，CodeLlama 7B/13B + Ollama 是个不错的入门选择。<br><br>如果你**追求最强代码能力**，2024 年之后的 DeepSeek-Coder-V2、Qwen2.5-Coder、Claude 3.5 Sonnet 在多数任务上表现更好，CodeLlama 已不是首选。<br><br>如果你是**企业要私有化部署**，CodeLlama 
+        </div>
+        <a href="https://www.codellama.com" target="_blank" class="cta">访问官网 →</a>
+    </div>
+</body>
+</html>

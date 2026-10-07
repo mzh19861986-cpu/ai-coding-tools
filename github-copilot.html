@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot - 详细介绍 | AI Coding Tools</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
+        nav a { color: #6b7280; text-decoration: none; }
+        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
+        .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #111; color: white; border-radius: 8px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
+    <div class="container">
+        <h1>💻 GitHub Copilot</h1>
+        <div class="content">
+            # GitHub Copilot 详细介绍<br><br>## 1. 这个工具是什么<br><br>GitHub Copilot 是 GitHub（微软旗下）和 OpenAI 合作推出的 AI 编程助手。它基于 OpenAI 的 Codex 模型（后续迭代到 GPT-4 级别的模型），在你写代码的时候实时给出补全建议。<br><br>说白了，它就是一个"代码自动补全"工具，但比传统的补全强很多——它不只是补全一个变量名或函数名，而是能根据上下文生成整段代码、整个函数，甚至多个文件的改动建议。<br><br>它最初在 2021 年以技术预览形式发布，2022 年正式商用，目前已经深度集成到 VS Code、Visual Studio、JetBrains 全家桶、Neovim 等主流编辑器中，也有 GitHub 网页版和 CLI 版本。<br><br>---<br><br>## 2. 适合谁用<br><br>**比较适合：**<br>- 日常写业务代码的开发者（前端、后端、脚本都行）<br>- 需要写大量重复性/模板化代码的人<br>- 学习新语言或新框架的人（可以当参考）<br>- 写测试、写文档、写正则表达式这类"费力不讨好"的活<br><br>**不太适合：**<br>- 对代码安全/合规要求极高的场景（比如涉密项目，代码不能上传）<br>- 完全不懂编程的新手——你没法判断它给的代码对不对，容易埋坑<br>- 期望它"帮你写完整个项目"的人——它做不到，别信营销话术<br><br>---<br><br>## 3. 核心功能<br><br>**代码补全**<br>最基础也最常用的功能。你写着写着，它用灰色文字提示接下来可能的代码，按 Tab 接受。支持单行、多行、整函数级别。<br><br>**Copilot Chat**<br>在编辑器侧边栏里跟 AI 对话，可以：<br>- 解释选中的代码<br>- 让它帮你改 bug<br>- 生成单元测试<br>- 回答关于代码库的问题（@workspace）<br><br>**斜杠命令**<br>在 Chat 里用 `/explain`、`/fix`、`/tests`、`/doc` 等命令快速执行常见任务。<br><br>**多文件编辑（Copilot Edits）**<br>可以选中多个文件，用自然语言描述需求，让它跨文件修改代码。这个功能实用性一般，复杂改动还是容易出错。<br><br>**CLI 集成**<br>在终端里用 `gh copilot suggest` 让它帮你生成 shell 命令，或者 `gh copilot explain` 解释一条命令。<br><br>**代码审查（PR 摘要）**<br>在 GitHub 上可以自动生成 Pull Request 的描述和审查意见，但质量参差不齐。<br><br>---<br><br>## 4. 优缺点<br><br>**优点：**<br>- 对重复性代码效率提升明显，比如写 CRUD、写测试、写配置<br>- 学习 unfamiliar 的库或语言时，能快速给出可用示例<br>- 集成度高，主流编辑器基本都支持<br>- 接受/拒绝建议的操作很顺手，不打断编码节奏<br><br>**缺点：**<br>- **代码质量不稳定**：简单场景很好，复杂逻辑经常给出看起来对但实际有 bug 的代码<br>- **会"一本正经地胡说八道"**：编造不存在的 API、函数、库是常事<br>- **安全与隐私顾虑**：代码会发送到云端，企业敏感项目需谨慎（虽然有企业版承诺不保留代码）<br>- **对上下文理解有限**：大型项目里，它经常"看不到"项目其他部分，给出的代码不符合项目规范<br>- **可能让人变懒**：长期依赖会导致自己写代码的能力退化，尤其是新手<br>- **许可证风险**：生成的代码可能和训练数据中的公开代码相似，存在潜在版权争议（GitHub 有过滤机制但不保证 100%）<br><br>---<br><br>## 5. 怎么开始用<br><br>**步骤：**<br><br>1. 有一个 GitHub 账号<br>2. 订阅 Copilot（个人版有免费额度，见下一节）<br>3. 在编辑器里安装插件：<br>   - VS Code：扩展市场搜 "GitHub Copilot"<br>   - JetBrains：插件市场搜 "GitHub Copilot"<br>   - Visual Studio：自带安装器里有<br>   - Neovim：用 `copilot.vim` 或 `copilot.lua`<br>4. 安装后登录 GitHub 账号授权<br>5. 开始写代码，看到灰色建议按 Tab 接受，按 Esc 拒绝<br>6. 想用 Chat 的话，侧边栏点 Copilot 图标<br><br>**小技巧：**<br>- 写注释描述你要干什么，它更容易给出对的代码<br>- 打开相关文件作为上下文，补全质量会好很多<br>- 不要无脑接受，尤其是涉及安全、并发、边界处理的代码<br><br>---<br><br>## 6. 免费还是付费<br><br>**有免费版（Copilot Free）**<br>2024 年底 GitHub 推出了免费版：<br>- 每月 2000 次代码补全<br>- 每月 50 次 Chat 对话<br>- 只能用 GPT-4o 和 Claude 3.5 Sonnet 的基础模型<br>- 适合轻度使用或试用<br><br>**付费版：**<br><br>| 版本 | 价格 | 说明 |<br>|------|------|------|<br>| Pro | $10/月 或 $100/年 | 个人开发者，无限补全和 Chat |<br>| Pro+ | $39/月 | 更高模型调用额度，可用最新模型 |<br>| Business | $19/人/月 | 企业用，有管理策略、审计日志 |<br>| Enterprise | $39/人/月 | 更高级的企业功能，可定制模型 |<br><br>**免费的情况：**<br>- 学生、教师（通过 GitHub Education 认证）<br>- 部分开源项目维护者<br>- 某些企业客户附带<br><br>---<br><br>## 总结一句<br><br>GitHub Copilot 是个**好用的辅助工具，但不是替代品**。它能把你的编码速度提升 20%-40%（因人而异），但前提是你能判断它给的代码对不对。把它当成一个"随时在旁边的实习生"——能帮你干活，但你得把关。
+        </div>
+        <a href="https://www.githubcopilot.com" target="_blank" class="cta">访问官网 →</a>
+    </div>
+</body>
+</html>
