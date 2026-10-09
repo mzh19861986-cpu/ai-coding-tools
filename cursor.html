@@ -3,26 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursor - 详细介绍 | AI Coding Tools</title>
+    <title>cursor - AI编程工具</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, sans-serif; color: #111; background: #f9fafb; line-height: 1.7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-        nav { padding: 1rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; position: sticky; top: 0; background: white; }
-        nav a { color: #6b7280; text-decoration: none; }
-        h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-        .content { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; }
-        .cta { display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #111; color: white; border-radius: 8px; text-decoration: none; }
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.8; color: #1a1a2e; }
+        a { color: #0066ff; text-decoration: none; }
+        h1 { margin-bottom: 1rem; }
     </style>
 </head>
 <body>
-    <nav><div class="container"><a href="./">← 返回首页</a></div></nav>
-    <div class="container">
-        <h1>💻 Cursor</h1>
-        <div class="content">
-            # Cursor 详细介绍<br><br>## 1. 这是什么工具<br><br>Cursor 是一款基于 VS Code 二次开发的 AI 代码编辑器。它的底层是微软的 VS Code（开源版本 Code-OSS），所以界面、快捷键、插件生态基本和 VS Code 一致。在此基础上，Cursor 深度集成了大语言模型（Claude、GPT 系列等），把 AI 能力做进了编辑器的各个角落，而不是像普通插件那样"外挂"在上面。<br><br>简单说：**VS Code 的外壳 + 深度集成的 AI 编程助手**。它由 Anysphere 公司开发，2023 年发布，目前是 AI 编程工具里比较主流的一款。<br><br>---<br><br>## 2. 适合谁用<br><br>**比较适合：**<br>- 已经在用 VS Code、不想换编辑器的开发者<br>- 想用 AI 加速日常写代码、改 bug、读老代码的人<br>- 独立开发者、小团队，需要快速出原型<br>- 学习编程的人，可以让 AI 解释代码、给示例<br><br>**不太适合：**<br>- 完全不用 IDE、只写脚本的人（有点大材小用）<br>- 对数据隐私极度敏感、代码不能上传的团队（除非用企业版私有部署）<br>- 期望"AI 自动写完整个项目、自己啥都不用管"的人——目前做不到，还是需要人来判断和调试<br><br>---<br><br>## 3. 核心功能<br><br>**Tab 补全**<br>比传统代码补全更激进，能根据上下文预测你接下来要写的一整段代码，按 Tab 直接接受。这是日常用得最多的功能。<br><br>**Chat（对话）**<br>侧边栏可以和 AI 聊天，问代码问题、让它解释某段逻辑。可以 @ 某个文件或整个代码库作为上下文。<br><br>**Inline Edit（Ctrl/Cmd + K）**<br>选中一段代码，直接输入指令让它改，比如"改成异步"、"加错误处理"，改动以 diff 形式展示。<br><br>**Composer / Agent 模式**<br>用自然语言描述需求，AI 可以跨多个文件生成或修改代码。Agent 模式下它还能自己跑命令、读文件、迭代修改，更接近"自主完成一个任务"，但复杂任务仍需人工把关。<br><br>**代码库索引（Codebase Indexing）**<br>把整个项目建索引，AI 回答时能理解项目全局，而不是只看当前文件。<br><br>**兼容 VS Code 生态**<br>可以导入 VS Code 的配置、快捷键、扩展，迁移成本低。<br><br>---<br><br>## 4. 优缺点<br><br>**优点：**<br>- AI 集成度高，补全和改代码体验比装插件顺滑<br>- 迁移成本低，VS Code 用户几乎无缝切换<br>- 支持多家顶级模型，可以按需切换<br>- Composer/Agent 对多文件改动的支持比较实用<br>- 更新迭代快<br><br>**缺点：**<br>- **要花钱**，免费额度很少，重度使用基本得订阅<br>- 有时 AI 会"自信地写错"，生成看似合理但跑不通的代码，需要自己验证<br>- Agent 模式在复杂项目上容易跑偏，改动范围可能超出预期<br>- 依赖云端模型，网络不好时体验受影响，代码会上传到服务器（隐私顾虑）<br>- 基于 VS Code 二次开发，偶尔会有版本滞后或和某些插件冲突<br>- 价格对个人开发者不算便宜<br><br>---<br><br>## 5. 怎么开始用<br><br>1. 去官网 cursor.com 下载对应系统版本（Windows / macOS / Linux）<br>2. 安装后首次启动，可以一键导入 VS Code 的配置、扩展、快捷键<br>3. 注册账号（邮箱或 GitHub 登录）<br>4. 打开一个项目文件夹，Cursor 会提示建立代码库索引（可选，但推荐）<br>5. 熟悉几个核心操作：<br>   - `Tab` 接受补全<br>   - `Ctrl/Cmd + K` 行内改代码<br>   - `Ctrl/Cmd + L` 打开 Chat<br>   - `Ctrl/Cmd + I` 打开 Composer<br>6. 先从小的改动、问问题开始，别一上来就让 Agent 改整个项目<br><br>---<br><br>## 6. 免费还是付费<br><br>**有免费版，但限制较多。**<br><br>- **Free（Hobby）**：送少量高级模型调用次数和补全额度，用完后降级到基础模型，适合轻度试用<br>- **Pro**：约 $20/月，解锁更多高级模型额度（Claude、GPT 等）、无限补全、Agent 等功能，个人开发者主流选择<br>- **Business**：约 $40/人/月，团队管理、隐私模式等<br>- **Enterprise**：按需报价，支持私有部署、SSO 等<br><br>具体额度和价格官方调整比较频繁，**以官网最新说明为准**。总的来说：轻度试用免费够用，认真用来写代码基本得订阅 Pro。<br><br>---<br><br>**一句话总结**：Cursor 是目前完成度比较高的 AI 代码编辑器，适合 VS Code 用户和想用 AI 提效的开发者，但它是"助手"不是"替身"，代码质量仍需自己把关，且重度使用要付费。
-        </div>
-        <a href="https://www.cursor.com" target="_blank" class="cta">访问官网 →</a>
-    </div>
+    <a href="../">← 返回首页</a>
+    <h1>cursor</h1>
+    <p>内容生成中... Expecting value: line 1 column 1 (char 0)</p>
 </body>
 </html>
